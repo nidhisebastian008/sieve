@@ -20,6 +20,8 @@ production logs ──► score ──► filter ──► versioned dataset ─
 
 No API keys. No SaaS. Runs entirely on your machine.
 
+![sieve demo](demo.gif)
+
 ---
 
 ## The problem it solves
