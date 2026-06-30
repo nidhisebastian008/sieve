@@ -25,7 +25,12 @@ class Interaction(Base):
     messages = Column(JSON, nullable=False)  # OpenAI chat format
     metadata_ = Column("metadata", JSON, default=dict)
     ingested_at = Column(DateTime, default=datetime.utcnow)
-    quality_score = Column(Float, nullable=True)
+    quality_score = Column(Float, nullable=True)   # final combined score
+    heuristic_score = Column(Float, nullable=True)
+    judge_score = Column(Float, nullable=True)       # LLM-as-judge 0–1
+    ifd_score = Column(Float, nullable=True)         # instruction following difficulty 0–1
+    embedding = Column(JSON, nullable=True)          # cached sentence embedding
+    is_duplicate = Column(String, nullable=True)     # id of canonical interaction if dup
     scored_at = Column(DateTime, nullable=True)
     scorer = Column(String, nullable=True)
 

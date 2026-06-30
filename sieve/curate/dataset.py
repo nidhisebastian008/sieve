@@ -17,6 +17,7 @@ class DatasetManager:
         min_quality: float = 0.0,
         description: Optional[str] = None,
         parent_name: Optional[str] = None,
+        exclude_duplicates: bool = True,
     ) -> DatasetVersion:
         query = self.session.query(Interaction)
 
@@ -25,6 +26,9 @@ class DatasetManager:
                 Interaction.quality_score >= min_quality,
                 Interaction.quality_score.isnot(None),
             )
+
+        if exclude_duplicates:
+            query = query.filter(Interaction.is_duplicate.is_(None))
 
         if parent_name:
             parent = self.session.query(DatasetVersion).filter_by(name=parent_name).first()
