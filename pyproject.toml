@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "sieve-llm"
+name = "trainsieve"
 version = "0.1.0"
 description = "Production LLM traces → curated training datasets → fine-tune pipeline"
 requires-python = ">=3.11"

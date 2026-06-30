@@ -2,6 +2,8 @@
 
 > Your model is only as good as the data you trained it on. Most teams never close that loop.
 
+[![PyPI](https://img.shields.io/pypi/v/trainsieve)](https://pypi.org/project/trainsieve)
+[![Downloads](https://img.shields.io/pypi/dm/trainsieve)](https://pypi.org/project/trainsieve)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org)
 [![Tests](https://img.shields.io/badge/tests-12%20passing-brightgreen)]()
@@ -40,6 +42,12 @@ But finding them means:
 ---
 
 ## Quickstart
+
+```bash
+pip install trainsieve
+```
+
+Or from source:
 
 ```bash
 git clone https://github.com/nidhisebastian008/sieve
